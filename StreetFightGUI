@@ -1,6 +1,5 @@
 --Script made By:Stephanie is mine#5501
 --ZORO ON TOP!!
-loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("SSJ", "DarkTheme")
 local Tab = Window:NewTab("Player")
