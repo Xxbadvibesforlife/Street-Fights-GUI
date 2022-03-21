@@ -1,0 +1,41 @@
+--Script made By:Stephanie is mine#5501
+--ZORO ON TOP!!
+loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SSJ", "DarkTheme")
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Player|Tab")
+Section:NewButton("Anti-Ragdoll", "Removes:RagdollFromDeath", function()
+   -------------------------------------------------------------------------------NEEDS TO BE FIXED ANTI Ragdoll
+    local Player = game:GetService("Players").LocalPlayer
+    game:GetService("Workspace").Player["Ragdoll On Death"]:Destroy()
+    wait(0.1)
+end)
+----------[Sliders|Section]----------
+local Section = Tab:NewSection("Sliders|Tab")
+Section:NewSlider("Fov", "Changes|FieldOfView", 500, 0, function(s) -- Fov
+    game:GetService("Workspace").Camera.FieldOfView  = s
+end)
+Section:NewSlider("Walk|Speed", "Changes The Sped Of Your walk", 127, 0, function(s) -- WalkSpeed
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+---------------------[BIKE SECTION!]---------------------
+local Section = Tab:NewSection("Bike|Sliders ONLY WORKS ON ONE OF THE BIKES!!!")
+---------------------[Forwards Speed!]---------------------
+Section:NewSlider("Forwards|Speed", "Changes|The Speed Of Your Bike", 122, 0, function(s) -- BikeSpeed
+        game:GetService("Workspace").Motorcycle.Configuration["Forwards Speed"].Value = s
+    print("WORNING!!! IF you get to much air it just kicks you!")
+end)
+---------------------[Reverse Speed!]---------------------
+Section:NewSlider("Reverse|Speed", "Changes|Reverse|Speed", 122, 0, function(s) -- BikeSpeed
+        game:GetService("Workspace").Motorcycle.Configuration["Reverse Speed"].Value = s
+        print("WORNING!!! IF you get to much air it just kicks you!")
+end)
+--------------------[HeadLight Brightness!]---------------
+Section:NewSlider("HeadLight|Brightness", "Changes|The Brightness of HeadLight", 500, 0, function(s) -- BikeSpeed
+        game:GetService("Workspace").Motorcycle.FrontLight.SpotLight.Brightness = s
+end)
+
+--------------------[MODS:TAB!]---------------
+local Tab = Window:NewTab("Mods")
+local Section = Tab:NewSection("Mods|Tab")
