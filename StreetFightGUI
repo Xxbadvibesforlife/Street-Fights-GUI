@@ -35,6 +35,16 @@ Section:NewSlider("HeadLight|Brightness", "Changes|The Brightness of HeadLight",
         game:GetService("Workspace").Motorcycle.FrontLight.SpotLight.Brightness = s
 end)
 
+---------------------[CASH SECTION!]---------------------
+local Section = Tab:NewSection("Cash|Tools")
+--
+Section:NewTextBox("DropCash", "Put Value of Cash in DropCash", function(txt)
+
+local ohString1 = txt
+
+game:GetService("ReplicatedStorage").WalletRemotes.DropCash:FireServer(ohString1)
+end)
+
 --------------------[MODS:TAB!]---------------
 local Tab = Window:NewTab("Mods")
 local Section = Tab:NewSection("Mods|Tab")
